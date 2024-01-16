@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Supplier;
 
 public class Main {
+
 
 
     private ArrayList<String> listOfStudents;
@@ -19,6 +21,7 @@ public class Main {
 
 
     public Main() {
+        makeListFromFile();
 
     }
     public void program() {
@@ -39,7 +42,7 @@ public class Main {
         Main main = new Main();
 /*        main.program();*/
 
-       ArrayList<String> lsit =  main.makeListFromFile();
+       main.makeListFromFile();
     }
 
 
@@ -49,6 +52,7 @@ public class Main {
     }
 
     public void makeListFromFile() {
+        ArrayList<String> listOfStudentsReturn = null;
         try {
             FileInputStream fstream = new FileInputStream("src/main/java/com/booleanuk/StudentList.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
@@ -56,14 +60,12 @@ public class Main {
             String strLine;
 
 
+            listOfStudentsReturn = new ArrayList<>();
             // Read File Line By Line
             while ((strLine = br.readLine()) != null) {
 
-                System.out.println(strLine);
-
+                listOfStudentsReturn.add(strLine);
             }
-
-            //listOfStudents.remove(listOfStudents.size()-1);
 
 
         } catch (Exception e) {
@@ -72,5 +74,13 @@ public class Main {
 
 
 
+        this.listOfStudents = listOfStudentsReturn;
+    }
+
+    public ArrayList<String> getListOfStudents() {
+        if(this.listOfStudents == null) {
+            makeListFromFile();
+        }
+        return this.listOfStudents;
     }
 }

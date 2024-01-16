@@ -72,8 +72,9 @@ public class CoreTest {
         Main main = new Main();
 
         main.makeListFromFile();
+        ArrayList<String> list = main.getListOfStudents();
 
-        Assertions.assertEquals("Ateeb Salam", main.getListOfStudents.get(0));
+        Assertions.assertEquals("Ateeb Salam", list.get(0));
 
     }
 
