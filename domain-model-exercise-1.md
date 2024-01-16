@@ -20,9 +20,9 @@
 3. When I select the option it will output a list of all of the students as randomly chosen pairs.
 ```
 
-| Classes        | Methods                                                             | Scenario                  | Returns                               |
-|----------------|---------------------------------------------------------------------|---------------------------|---------------------------------------|
-| RandomStudents | void displayOptions()<br/>ArrayList<String> getRandomStudentPairs() | Input '2' on the keyboard | ArrayList with random pairs from list |
+| Classes        | Methods                                                      | Scenario                  | Returns                               |
+|----------------|--------------------------------------------------------------|---------------------------|---------------------------------------|
+| RandomStudents | void displayOptions()<br/>ArrayList<String> getRandomPairs() | Input '2' on the keyboard | ArrayList with random pairs from list |
 
 ```
 4. When I select the option it will output a random list of Peer Groups for all of the students (groups of 4 students).

@@ -3,7 +3,9 @@ package com.booleanuk;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class RandomStudents {
@@ -22,6 +24,15 @@ public class RandomStudents {
 
     public String getRandomStudent(){
         return studentList.get(random.nextInt(0, studentList.size()));
+    }
+
+    public ArrayList<String> getRandomPairs(){
+        Collections.shuffle(studentList, random);
+        ArrayList<String> pairs = new ArrayList<>();
+        for(int i = 0; i < studentList.size(); i += 2){
+            pairs.add(studentList.get(i) + ", " + studentList.get(i+1));
+        }
+        return pairs;
     }
     public ArrayList<String> loadList(){
         ArrayList<String> arr = new ArrayList<>();
