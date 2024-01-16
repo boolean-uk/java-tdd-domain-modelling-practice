@@ -4,6 +4,7 @@ import com.booleanuk.RandomStudentSelector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -49,7 +50,7 @@ public class CoreTest {
     }
 
     @Test
-    public void testLoadFile() {
+    public void testLoadFile() throws FileNotFoundException {
         RandomStudentSelector randomStudentSelector = new RandomStudentSelector();
         ArrayList<String> students = new ArrayList<>(Arrays.asList("P", "Q", "R", "S"));
         randomStudentSelector.loadFile("students.txt");

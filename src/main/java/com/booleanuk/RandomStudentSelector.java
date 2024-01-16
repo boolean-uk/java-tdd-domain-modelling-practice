@@ -1,5 +1,7 @@
 package com.booleanuk;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class RandomStudentSelector {
@@ -51,5 +53,15 @@ public class RandomStudentSelector {
         }
 
         return res;
+    }
+
+    public void loadFile(String filePath) throws FileNotFoundException {
+        Scanner s = new Scanner(new File(filePath));
+        ArrayList<String> list = new ArrayList<String>();
+        while (s.hasNext()){
+            list.add(s.next());
+        }
+        s.close();
+        students = list;
     }
 }
