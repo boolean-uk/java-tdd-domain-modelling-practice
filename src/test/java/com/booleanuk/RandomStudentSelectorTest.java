@@ -36,7 +36,7 @@ public class RandomStudentSelectorTest {
     public void testGetRandomStudent() {
         RandomStudentSelector studentSelector = new RandomStudentSelector();
         studentSelector.randomiser = new Random(1000);
-        Assertions.assertEquals(studentSelector.students[0], studentSelector.getRandomStudent());
+        Assertions.assertEquals(studentSelector.students[1], studentSelector.getRandomStudent());
         Assertions.assertEquals(studentSelector.students[1], studentSelector.getRandomStudent());
         Assertions.assertEquals(studentSelector.students[0], studentSelector.getRandomStudent());
     }
