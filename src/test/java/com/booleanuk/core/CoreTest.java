@@ -34,14 +34,18 @@ public class CoreTest {
 @Test
 public void randomStudentPairs() {
     Student student = new Student();
+    String[][] shouldBe = {{"Enock", "Jenny"}, {"Julie", "Tor"}, {"Sander", "Fred"}, {"Tonnes", }};
     student.randomiser = new Random(100);
-    String[][] studentPairsFirst = student.randomStudentPairs();
-    student.randomiser = new Random(100);
-    String[][] studentPairsSecond = student.randomStudentPairs();
-    Assertions.assertEquals(studentPairsFirst[0], studentPairsSecond[0]);
-    Assertions.assertEquals(studentPairsFirst[1], studentPairsSecond[1]);
-    Assertions.assertEquals(studentPairsFirst[2], studentPairsSecond[2]);
-    Assertions.assertEquals(studentPairsFirst[3], studentPairsSecond[3]);
+    String[][] studentPairs = student.randomStudentPairs();
+
+    Assertions.assertEquals(shouldBe[0][0], studentPairs[0][0]);
+    Assertions.assertEquals(shouldBe[1][0], studentPairs[1][0]);
+    Assertions.assertEquals(shouldBe[2][0], studentPairs[2][0]);
+    Assertions.assertEquals(shouldBe[3][0], studentPairs[3][0]);
+
+    Assertions.assertEquals(shouldBe[0][1], studentPairs[0][1]);
+    Assertions.assertEquals(shouldBe[1][1], studentPairs[1][1]);
+    Assertions.assertEquals(shouldBe[2][1], studentPairs[2][1]);
 }
 //4. When I select the option it will output a random list of Peer Groups for all of the students (groups of 4 students).
 

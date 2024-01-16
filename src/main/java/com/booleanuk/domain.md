@@ -8,7 +8,7 @@
 |                         | randomStudent()      | Generates random number and uses it to  | student      |
 |                         |                      | pick a student from the array           |              |
 |                         |                      |                                         |              |
-| String[][] student      | randomStudentPairs() | Randomly select one and one student and | studentPairs |
+|                         | randomStudentPairs() | Randomly select one and one student and | studentPairs |
 | boolean[] studentPaired |                      | add to pairs. Paired students gets      |              |
 |                         |                      | true in bool array. Lastly resets the   |              |
 |                         |                      | bool array                              |              |
