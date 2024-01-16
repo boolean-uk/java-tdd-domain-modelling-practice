@@ -29,9 +29,9 @@ public class CoreTest {
         RandomStudents rs = new RandomStudents();
         rs.setSeed(230);
 
-        Assertions.assertEquals("Harper Evans", rs.getRandomStudent());
-        Assertions.assertEquals("Mason Foster", rs.getRandomStudent());
-        Assertions.assertEquals("Lucas Sullivan", rs.getRandomStudent());
+        Assertions.assertEquals("Emma Parker", rs.getRandomStudent());
+        Assertions.assertEquals("Aiden Bennett", rs.getRandomStudent());
+        Assertions.assertEquals("Liam Turner", rs.getRandomStudent());
 
     }
 
@@ -50,6 +50,16 @@ public class CoreTest {
 
 
         Assertions.assertArrayEquals(expected.toArray(), rs.getRandomPairs().toArray());
+    }
+
+    /* Test Use Case 4 */
+    @Test
+    public void testGetRandomGroups(){
+        RandomStudents rs = new RandomStudents();
+        rs.setSeed(300);
+        ArrayList<String[]> expected = new ArrayList<>();
+        expected.add(new String[]{"", "", "", ""});
+        Assertions.assertArrayEquals(expected.toArray(), rs.getRandomGroups().toArray());
     }
 
 

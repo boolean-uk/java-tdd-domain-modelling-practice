@@ -3,7 +3,7 @@ package com.booleanuk;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -43,6 +43,12 @@ public class RandomStudents {
             pairs.add(pair);
         }
         return pairs;
+    }
+
+    public ArrayList<String[]> getRandomGroups(){
+
+        return new ArrayList<>();
+
     }
     public ArrayList<String> loadList(){
         ArrayList<String> arr = new ArrayList<>();
