@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public void menu() {
 
-        System.out.println("Welcome to the menu");
+        System.out.println("Welcome to the menu \n Here are the different functions: \n  1. Choose random student \n 2. Output list of randomly chosen pairs \n 3. Output random list of peer groups \n 4. Current students");
 
     }
 
