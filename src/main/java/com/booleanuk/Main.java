@@ -1,6 +1,8 @@
 package com.booleanuk;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -32,7 +34,12 @@ public class Main {
 
             switch (input) {
                 case "a" -> System.out.println(studentRandomizer.getRandomStudent());
-                case "b" -> System.out.println("TODO"); // TODO
+                case "b" -> {
+                    ArrayList<String[]> randomPairs = studentRandomizer.getRandomPairs();
+                    for (int i = 0; i < randomPairs.size(); i++) {
+                        System.out.println("Pair " + (i+1) + ": " + Arrays.toString(randomPairs.get(i)));
+                    }
+                }
                 case "c" -> System.out.println("TODO"); // TODO
             }
         } while (!input.equalsIgnoreCase("X"));
