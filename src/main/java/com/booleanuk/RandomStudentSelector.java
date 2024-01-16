@@ -31,4 +31,25 @@ public class RandomStudentSelector {
 
         return res;
     }
+
+    public ArrayList<String> getRandomGroups() {
+        ArrayList<String> res = new ArrayList<>();
+        Collections.shuffle(students, randomiser);
+        String group;
+
+        for(int i = 0; i < students.size(); i+=4) {
+            group = "";
+            group += students.get(i);
+            for(int j = 1; j < 4 && i+j <students.size(); j++) {
+                if(j == 3 || i+j+1 >=students.size()) {
+                    group += " & " + students.get(i + j);
+                } else {
+                    group += ", " + students.get(i + j);
+                }
+            }
+            res.add(group);
+        }
+
+        return res;
+    }
 }

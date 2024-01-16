@@ -18,5 +18,11 @@ public class Main {
         for(int i = 0; i < 2; i++) {
             System.out.println(rss.getRandomPairs());
         }
+        rss.randomiser = new Random(100);
+
+        rss.students = new ArrayList<>(Arrays.asList("A", "B", "C", "D", "E", "F", "G"));
+        for(int i = 0; i < 2; i++) {
+            System.out.println(rss.getRandomGroups());
+        }
     }
 }
