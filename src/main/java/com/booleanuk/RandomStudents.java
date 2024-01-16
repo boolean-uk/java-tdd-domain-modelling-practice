@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Random;
+import java.util.*;
 
 public class RandomStudents {
 
@@ -73,6 +70,35 @@ public class RandomStudents {
 
         return arr;
     }
+    public void displayOptions(){
+        Scanner input = new Scanner(System.in);
+        String text = "";
+        System.out.println("enter an integer");
+        while(true){
+            System.out.println(displayString());
+            text = input.nextLine();
+            if(text.equals("1")){
+                System.out.println(getRandomStudent());
+            }
+            else if(text.equals("2")){
+                for(String[] s : getRandomPairs()){
+                    System.out.println(Arrays.toString(s));
+                }
+            }
+            else if(text.equals(("3"))){
+                for(String[] s : getRandomGroups()){
+                    System.out.println(Arrays.toString(s));
+                }
+            }
+            else if(text.equals("4")){
+                System.out.println("Bye");
+                break;
+            }
+
+        }
+
+
+    }
     public String displayString(){
         return """
                 Choose an option:
@@ -86,10 +112,7 @@ public class RandomStudents {
     public static void main(String[] args){
 
         RandomStudents rs = new RandomStudents();
-        rs.setSeed(300);
-        for(String[] s: rs.getRandomGroups()){
-            System.out.println(Arrays.toString(s));
-        }
+        rs.displayOptions();
 
     }
 }
