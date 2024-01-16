@@ -23,6 +23,42 @@ Implement a random student selector similar to the one used during lessons.
 5. When I run the program it should load the list of current students from a text file.
 ```
 
+## 1
+
+Class Main
+
+| Class Variables | Methods   | Scenarios                                | Output/Return |
+|-----------------|-----------|------------------------------------------|---------------|
+|                 | menu()    | Menu shows the different functionalities | void          |
+|                 |           | of the program in terminal               |               |
+|                 | program() |                                          | void          |
+
+
+
+## 2
+
+Class Main
+
+| Class Variables                  | Methods         | Scenarios                 | Output/Return           |
+|----------------------------------|-----------------|---------------------------|-------------------------|
+| ArrayList<String> listOfStudents | randomStudent() | Calculates random student | String getRandomStudent |
+| Random rand                      |                 |                           |                         |
+|                                  |                 |                           |                         |
+
+
+## 5
+
+Class Main
+
+| Class Variables                  | Methods            | Scenarios                | Output/Return |
+|----------------------------------|--------------------|--------------------------|---------------|
+| ArrayList<String> listOfStudents | makeListFromFile() | Makes a list of students | void          |
+|                                  |                    | from file and sets class |               |
+|                                  |                    | variable list to this    |               |
+
+
+
+
 ## Exercise 2
 
 Thinking about the Poker Challenge implement a deck of cards (52 cards - 4 suits - 13 cards per suit)
