@@ -1,13 +1,21 @@
 package com.booleanuk;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class RandomStudentSelector {
 
     public Random randomiser;
     public ArrayList<String> listOfNames;
+
+    public RandomStudentSelector() {
+        this.randomiser = new Random(500);
+        this.listOfNames = new ArrayList<>();
+    }
 
     public RandomStudentSelector(ArrayList<String> students) {
         this.randomiser = new Random(500);
@@ -60,18 +68,38 @@ public class RandomStudentSelector {
         return groups;
     }
 
+    public void loadTextFile(String filePath) {
+        try {
+            File file = new File(filePath);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String student = scanner.nextLine();
+                this.listOfNames.add(student);
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
     /* Main function for testing different seeds. */
     public static void main(String[] args) {
-        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina",
-                "Hanna", "Elias", "Zuzanna", "Matilda", "Oskar"));
+        //ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina",
+          //      "Hanna", "Elias", "Zuzanna", "Matilda", "Oskar"));
 
-        RandomStudentSelector studentSelector = new RandomStudentSelector(students);
+        RandomStudentSelector studentSelector = new RandomStudentSelector();
 
-        ArrayList<ArrayList<String>> groups = studentSelector.getRandomFourGroups();
+//        ArrayList<ArrayList<String>> groups = studentSelector.getRandomFourGroups();
+//
+//        System.out.println(groups.size());
+//
+//        System.out.println(groups);
+        String filePath = "resources/students.txt";
 
-        System.out.println(groups.size());
+        studentSelector.loadTextFile(filePath);
 
-        System.out.println(groups);
+        System.out.println(studentSelector.listOfNames);
 
         /*for (int i = 0; i < 5; i++) {
             System.out.println(studentSelector.getRandomStudent());

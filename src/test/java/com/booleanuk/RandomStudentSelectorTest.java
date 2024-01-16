@@ -83,10 +83,9 @@ public class RandomStudentSelectorTest {
         ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina",
                 "Hanna", "Elias", "Zuzanna", "Matilda", "Oskar"));
 
-        RandomStudentSelector selector = new RandomStudentSelector(students);
-        selector.randomiser = new Random(500);
+        RandomStudentSelector selector = new RandomStudentSelector();
 
-        String filePath = "resources/icecreamTopping.txt";
+        String filePath = "resources/students.txt";
         selector.loadTextFile(filePath);
         Assertions.assertEquals(students, selector.listOfNames);
     }
