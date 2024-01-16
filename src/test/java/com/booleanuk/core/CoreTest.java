@@ -92,6 +92,7 @@ public class CoreTest {
     /* Test user story 4 */
     @Test
     public void testCreateHand(){
+        Deck.resetInstance();
         Deck deck = Deck.getInstance();
         deck.shuffleDeck(20032);
         Hand hand = new Hand();
@@ -103,17 +104,55 @@ public class CoreTest {
         Assertions.assertEquals(expected.get(0).getCardInfo(), actual.get(0).getCardInfo() );
         Assertions.assertEquals(expected.get(1).getCardInfo(), actual.get(1).getCardInfo() );
         Assertions.assertEquals(expected.get(2).getCardInfo(), actual.get(2).getCardInfo() );
-
+        Deck.resetInstance();
     }
 
     /* Test  user story 5*/
     @Test
     public void testCreateFourHandsWithFiveCards(){
+        Deck.resetInstance();
         Deck deck = Deck.getInstance();
         deck.shuffleDeck(2003);
         Table table = new Table();
+        table.createFourHands();
+        String expected = """
+       Spades King
+       Diamonds King
+       Hearts 7
+       Diamonds 2
+       Clubs 5
 
+       Spades 3
+       Clubs Queen
+       Clubs 2
+       Spades Queen
+       Spades Jack
 
-        Assertions.assertEquals(table.createFourHands(), null);
+       Clubs Jack
+       Spades 5
+       Clubs King
+       Spades 7
+       Hearts King
+
+       Hearts 10
+       Spades 6
+       Diamonds 8
+       Spades 8
+       Diamonds 4
+       
+        """;
+        Assertions.assertEquals(expected, table.viewHandsAsString());
+
+    }
+
+    /* Test User story 6*/
+
+    @Test
+    public void testSeeingTopOfTheDeck(){
+        Deck.resetInstance();
+        Deck deck = Deck.getInstance();
+        deck.shuffleDeck(400);
+        String expected = new Card("Spades", "5").getCardInfo();
+        Assertions.assertEquals(expected, deck.seeTopCard().getCardInfo());
     }
 }

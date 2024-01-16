@@ -13,4 +13,8 @@ public class Hand {
         hand = deck.getCards(num);
         return hand;
     }
+
+    public ArrayList<Card> getHand(){
+        return hand;
+    }
 }

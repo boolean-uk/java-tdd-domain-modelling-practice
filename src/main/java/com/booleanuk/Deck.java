@@ -23,7 +23,9 @@ public class Deck {
         }
         return instance;
     }
-
+    public static void resetInstance() {
+        instance = null;
+    }
     public ArrayList<Card>shuffleDeck(int seed){
         ArrayList<Card> temp = deck;
         Collections.shuffle(this.deck, new Random(seed));
