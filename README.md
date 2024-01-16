@@ -46,6 +46,16 @@ Class Main
 |                                  |                 |                           |                         |
 
 
+## 5
+
+Class Main
+
+| Class Variables                  | Methods            | Scenarios                | Output/Return |
+|----------------------------------|--------------------|--------------------------|---------------|
+| ArrayList<String> listOfStudents | makeListFromFile() | Makes a list of students | void          |
+|                                  |                    | from file and sets class |               |
+|                                  |                    | variable list to this    |               |
+
 
 
 
