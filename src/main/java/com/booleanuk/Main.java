@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+    private final static int GROUP_SIZE = 3;
+
     public static void main(String[] args) {
         // Initialize studentrandomizer class and get students from file
         // Exit if file not found
@@ -40,7 +42,7 @@ public class Main {
                         System.out.println("Pair " + (i+1) + ": " + Arrays.toString(randomPairs.get(i)));
                     }
                 }
-                case "c" -> System.out.println("TODO"); // TODO
+                case "c" -> System.out.println("Not implemented yet"); // TODO
             }
         } while (!input.equalsIgnoreCase("X"));
 
