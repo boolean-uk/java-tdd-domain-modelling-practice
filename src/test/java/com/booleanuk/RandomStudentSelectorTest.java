@@ -49,7 +49,7 @@ public class RandomStudentSelectorTest {
     @Test
     public void testGetRandomFourGroupsDivisibleByFour() {
         ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina", "Hanna", "Elias", "Zuzanna"));
-        ArrayList<String> firstGroup = new ArrayList<>(Arrays.asList("Sebastian", "Hanna", "Gustav", "Zuzanna"));
+        ArrayList<String> firstGroup = new ArrayList<>(Arrays.asList("Elias", "Paulina", "Alex", "Sebastian"));
 
         RandomStudentSelector selector = new RandomStudentSelector(students);
         selector.randomiser = new Random(500);

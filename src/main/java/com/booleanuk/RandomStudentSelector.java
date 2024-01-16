@@ -10,7 +10,7 @@ public class RandomStudentSelector {
     public ArrayList<String> listOfNames;
 
     public RandomStudentSelector(ArrayList<String> students) {
-        this.randomiser = new Random(500);
+        this.randomiser = new Random();
         this.listOfNames = students;
     }
 
@@ -44,23 +44,34 @@ public class RandomStudentSelector {
         ArrayList<ArrayList<String>> groups = new ArrayList<>();
         int randomNumber;
 
-
-
+        while (currentSize != 0) {
+            ArrayList<String> newGroup = new ArrayList<>();
+            for (int i = 0; i < 4; i++) {
+                if (currentSize == 0) {
+                    break;
+                }
+                randomNumber = this.randomiser.nextInt(currentSize);
+                newGroup.add(this.listOfNames.get(randomNumber));
+                this.listOfNames.remove(randomNumber);
+                currentSize--;
+            }
+            groups.add(newGroup);
+        }
         return groups;
     }
 
     /* Main function for testing different seeds. */
     public static void main(String[] args) {
-        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina"));
-        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Gustav", "Alexandra"));
+        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina", "Hanna", "Elias", "Zuzanna"));
+        ArrayList<String> firstGroup = new ArrayList<>(Arrays.asList("Sebastian", "Hanna", "Gustav", "Zuzanna"));
 
         RandomStudentSelector studentSelector = new RandomStudentSelector(students);
 
-        ArrayList<ArrayList<String>> pairs = studentSelector.getRandomPairs();
+        ArrayList<ArrayList<String>> groups = studentSelector.getRandomFourGroups();
 
-        System.out.println(pairs.size());
+        System.out.println(groups.size());
 
-        System.out.println(pairs);
+        System.out.println(groups);
 
         /*for (int i = 0; i < 5; i++) {
             System.out.println(studentSelector.getRandomStudent());
