@@ -31,6 +31,11 @@ public class Deck {
         Collections.shuffle(this.deck, new Random(seed));
         return this.deck;
     }
+
+    public Card seeTopCard(){
+
+        return this.deck.get(deck.size() -1);
+    }
     public ArrayList<Card>shuffleDeck(){
         Collections.shuffle(deck, new Random());
         return deck;

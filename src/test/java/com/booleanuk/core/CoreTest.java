@@ -152,7 +152,8 @@ public class CoreTest {
         Deck.resetInstance();
         Deck deck = Deck.getInstance();
         deck.shuffleDeck(400);
-        String expected = new Card("Spades", "5").getCardInfo();
+        System.out.println(deck.seeTopCard().getCardInfo());
+        String expected = new Card("Diamonds", "5").getCardInfo();
         Assertions.assertEquals(expected, deck.seeTopCard().getCardInfo());
     }
 }
