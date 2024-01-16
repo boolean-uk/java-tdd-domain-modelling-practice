@@ -1,5 +1,6 @@
 package com.booleanuk;
 
-public class Main {
+public class Student {
+
 
 }
