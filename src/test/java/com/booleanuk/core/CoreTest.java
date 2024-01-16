@@ -23,10 +23,10 @@ public class CoreTest {
     public void randomStudentTest() {
         Student student = new Student();
         student.randomiser = new Random(100);
-        Assertions.assertEquals(student.students[1], student.randomStudent());
+        Assertions.assertEquals(student.students[2], student.randomStudent());
+        Assertions.assertEquals(student.students[3], student.randomStudent());
         Assertions.assertEquals(student.students[4], student.randomStudent());
-        Assertions.assertEquals(student.students[4], student.randomStudent());
-        Assertions.assertEquals(student.students[0], student.randomStudent());
+        Assertions.assertEquals(student.students[5], student.randomStudent());
         Assertions.assertEquals(student.students[1], student.randomStudent());
     }
 

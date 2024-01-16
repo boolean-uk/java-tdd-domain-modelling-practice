@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Student {
-    public String[] students = {"Tonnes", "Sander", "Enock", "Jenny", "Julie", "Tor"};
+    public String[] students = {"Tonnes", "Sander", "Enock", "Jenny", "Julie", "Tor", "Fred"};
     Scanner input = new Scanner(System.in);
     public Random randomiser;
 
