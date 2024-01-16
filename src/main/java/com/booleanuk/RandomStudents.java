@@ -9,14 +9,19 @@ import java.util.Random;
 public class RandomStudents {
 
     public ArrayList<String> studentList;
+    public Random random;
 
     public RandomStudents(){
         studentList = loadList();
+        random = new Random();
     }
 
+    public void setSeed(int seed){
+        random = new Random(seed);
+    }
 
     public String getRandomStudent(){
-        return "";
+        return studentList.get(random.nextInt(0, studentList.size()));
     }
     public ArrayList<String> loadList(){
         ArrayList<String> arr = new ArrayList<>();

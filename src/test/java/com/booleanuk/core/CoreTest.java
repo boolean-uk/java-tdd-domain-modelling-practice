@@ -24,9 +24,14 @@ public class CoreTest {
     }
     /* Test Use Case 2*/
     @Test
-    public void testGetRandomStudent(){
+    public void testGetThreeRandomStudents(){
         RandomStudents rs = new RandomStudents();
-        Assertions.assertEquals("Thomas ", rs.getRandomStudent());
+        rs.setSeed(230);
+
+        Assertions.assertEquals("Harper Evans", rs.getRandomStudent());
+        Assertions.assertEquals("Mason Foster", rs.getRandomStudent());
+        Assertions.assertEquals("Lucas Sullivan", rs.getRandomStudent());
+
     }
 
 
