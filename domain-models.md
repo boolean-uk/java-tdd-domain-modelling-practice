@@ -18,10 +18,10 @@ Implement a random student selector similar to the one used during lessons.
 
 ### Domain Model
 
-| Classes           | Methods                            | Member Variables                                   | Scenario                                               | Outputs / Throws                       |
-|-------------------|------------------------------------|----------------------------------------------------|--------------------------------------------------------|----------------------------------------|
-| StudentRandomizer | fetchStudentsFromFile(String file) | ArrayList\<String> students                        | Successfully fetched students from file                | void                                   |
-|                   |                                    |                                                    | Could not fetch students from file (e.g. file missing) | Throws IOException                     |
-|                   | getRandom()                        | ArrayList\<String> students<br/> Random randomizer | Random student chosen                                  | String student                         |
-|                   | getRandomPairs()                   | ArrayList\<String> students<br/> Random randomizer | Random pairs generated                                 | ArrayList\<String[2]> pair             |
-|                   | getRandomPeerGroups(int size)      | ArrayList\<String> students<br/> Random randomizer | Random peer groups generated                           | ArrayList\<String[int size]> peerGroup |
+| Classes           | Methods                       | Member Variables                                   | Scenario                                               | Outputs / Throws                       |
+|-------------------|-------------------------------|----------------------------------------------------|--------------------------------------------------------|----------------------------------------|
+| StudentRandomizer | fetchStudentsFromFile()       | ArrayList\<String> students                        | Successfully fetched students from file                | void                                   |
+|                   |                               |                                                    | Could not fetch students from file (e.g. file missing) | Throws FileNotFoundException           |
+|                   | getRandom()                   | ArrayList\<String> students<br/> Random randomizer | Random student chosen                                  | String student                         |
+|                   | getRandomPairs()              | ArrayList\<String> students<br/> Random randomizer | Random pairs generated                                 | ArrayList\<String[2]> pair             |
+|                   | getRandomPeerGroups(int size) | ArrayList\<String> students<br/> Random randomizer | Random peer groups generated                           | ArrayList\<String[int size]> peerGroup |
