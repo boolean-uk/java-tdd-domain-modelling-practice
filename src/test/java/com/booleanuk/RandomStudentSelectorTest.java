@@ -40,4 +40,20 @@ public class RandomStudentSelectorTest {
         Assertions.assertEquals(studentSelector.students[1], studentSelector.getRandomStudent());
         Assertions.assertEquals(studentSelector.students[0], studentSelector.getRandomStudent());
     }
+
+    @Test
+    public void testGetPairsIsRandom() {
+        RandomStudentSelector studentSelector = new RandomStudentSelector();
+        studentSelector.randomiser = new Random(1000);
+        Assertions.assertFalse(studentSelector.getPairs().isEmpty());
+        String[] firstPair = {studentSelector.students[1], studentSelector.students[0]};
+        Assertions.assertEquals(firstPair, studentSelector.getPairs().get(0));
+    }
+
+    @Test
+    public void testGetPairsSize() {
+        RandomStudentSelector studentSelector = new RandomStudentSelector();
+        studentSelector.randomiser = new Random(1000);
+        Assertions.assertEquals(Math.ceil((double) studentSelector.students.length /2), studentSelector.getPairs().size);
+    }
 }
