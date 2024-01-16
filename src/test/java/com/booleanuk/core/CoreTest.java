@@ -64,11 +64,13 @@ public class CoreTest {
     public void testGetRandomStudent() {
         Main main = new Main();
 
+        main.setRand(new Random(100));
         String randomStudent = main.getRandomStudent();
 
-        main.setRand(new Random(100));
 
-        Assertions.assertEquals(main.getListOfStudents().get(1), randomStudent);
+
+
+        Assertions.assertEquals(main.getListOfStudents().get(23), randomStudent);
     }
 
 
