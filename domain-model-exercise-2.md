@@ -10,7 +10,7 @@
 
 | Classes | Methods                       | Scenario    | Returns                               |
 |---------|-------------------------------|-------------|---------------------------------------|
-| Deck    | void ShuffleDeck()            | Call method | Shuffles the deck but returns nothing |
+| Deck    | void shuffleDeck(int seed)    | Call method | Shuffles the deck but returns nothing |
 |         | ArrayList<String> getDeckInfo | Call method | ArrayList<String> with deck info      |
 
 

@@ -1,5 +1,7 @@
 package com.booleanuk.core;
 
+import com.booleanuk.Card;
+import com.booleanuk.Deck;
 import com.booleanuk.RandomStudents;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -74,9 +76,17 @@ public class CoreTest {
         Assertions.assertEquals("Mason Foster", rs.studentList.get(2));
         Assertions.assertEquals("Ava Mitchell", rs.studentList.get(3));
         Assertions.assertEquals("Liam Turner", rs.studentList.get(4));
-
-
-
     }
 
+    /* Tests for testing Poker - Domain model 2*/
+
+
+    /*Tests for user story 1 - 3 */
+    @Test
+    public void testShuffleDeckResult(){
+        Deck deck = new Deck();
+        deck.shuffleDeck(200);
+        ArrayList<Card> expected = deck.shuffleDeck(200);
+        Assertions.assertArrayEquals(deck.getDeck().toArray(), expected.toArray());
+    }
 }
