@@ -89,5 +89,4 @@ public class RandomStudentSelectorTest {
         selector.loadTextFile(filePath);
         Assertions.assertEquals(students, selector.listOfNames);
     }
-
 }
