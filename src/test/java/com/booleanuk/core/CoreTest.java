@@ -34,4 +34,12 @@ public class CoreTest {
                 .trim());
 
     }
+
+    @Test
+    public void testProgramRuns() {
+        Main main = new Main();
+
+        main.program();
+
+    }
 }
