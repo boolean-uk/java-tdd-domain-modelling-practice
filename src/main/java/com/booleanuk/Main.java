@@ -17,9 +17,15 @@ public class Main {
         return this.lisOfNames[this.randomizer.nextInt(this.lisOfNames.length)];
     }
 
-    public int returnRandom(){
-        return this.randomizer.nextInt(1,7);
+    public String returnPairs(){
+        int teller = 0;
+        String out = "";
+        while(teller < 3){
+            out += this.lisOfNames[this.randomizer.nextInt(this.lisOfNames.length)];
+        }
+        return out;
     }
+
 
     public static void main(String[] args) {
         Main main = new Main();
