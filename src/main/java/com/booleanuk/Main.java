@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.function.Supplier;
 
@@ -13,6 +14,7 @@ public class Main {
 
 
     private ArrayList<String> listOfStudents;
+
     public void menu() {
 
         System.out.println("Welcome to the menu \n Here are the different functions: \n  1. Choose random student \n 2. Output list of randomly chosen pairs \n 3. Output random list of peer groups \n 4. Current students");
@@ -22,7 +24,6 @@ public class Main {
 
     public Main() {
         makeListFromFile();
-
     }
     public void program() {
         Scanner scan = new Scanner(System.in);

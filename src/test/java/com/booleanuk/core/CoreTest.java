@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CoreTest {
 
@@ -64,6 +65,10 @@ public class CoreTest {
         Main main = new Main();
 
         String randomStudent = main.getRandomStudent();
+
+        main.rand = new Random(100);
+
+        Assertions.assertEquals(main.getListOfStudents().get(1), randomStudent);
     }
 
 
