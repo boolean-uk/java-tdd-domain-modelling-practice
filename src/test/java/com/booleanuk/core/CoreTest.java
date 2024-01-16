@@ -10,6 +10,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 public class CoreTest {
 
@@ -61,11 +62,20 @@ public class CoreTest {
 
 
     }*/
-
+    @Test
     public void testGetRandomStudent() {
         Main main = new Main();
 
         String randomStudent = main.getRandomStudent();
+    }
+
+
+    @Test
+    public void testMakeListFromFile() {
+        Main main = new Main();
+
+        ArrayList<String> listOfStudents =  main.makeListFromFile();
+
     }
 
 }
