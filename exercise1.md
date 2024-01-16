@@ -28,13 +28,13 @@ it should load the list of current students from a text file.
 ```
 Random Student Selector Class
 
-| Methods               | Member Variables     |
-|-----------------------|----------------------|
-| getRandomStudent()    | String[] listOfNames |
-| getRandomPairs()      | Random randomiser    |
-| getRandomFourGroups() |                      |
-| loadTextFile()        |                      |
-| startProgram()        |                      |
+| Methods               | Member Variables               |
+|-----------------------|--------------------------------|
+| getRandomStudent()    | ArrayList\<String> listOfNames |
+| getRandomPairs()      | Random randomiser              |
+| getRandomFourGroups() |                                |
+| loadTextFile()        |                                |
+| startProgram()        |                                |
 
 | Scenario                                                    | Return Value/Output/Result                                                                                |
 |-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
