@@ -58,7 +58,8 @@ public class CoreTest {
         RandomStudents rs = new RandomStudents();
         rs.setSeed(300);
         ArrayList<String[]> expected = new ArrayList<>();
-        expected.add(new String[]{"", "", "", ""});
+        expected.add(new String[]{"Liam Turner", "Ava Mitchell", "Olivia Rodriguez", "Sophia Hayes"});
+        expected.add(new String[]{"Mason Foster", "Emma Parker", "Ethan Thompson", "Aiden Bennett"});
         Assertions.assertArrayEquals(expected.toArray(), rs.getRandomGroups().toArray());
     }
 

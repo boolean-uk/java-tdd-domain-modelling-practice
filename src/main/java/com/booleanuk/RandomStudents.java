@@ -46,8 +46,18 @@ public class RandomStudents {
     }
 
     public ArrayList<String[]> getRandomGroups(){
+        Collections.shuffle(studentList, random);
+        ArrayList<String[]> groups = new ArrayList<>();
+        for(int i = 0; i < 4* (studentList.size() / 4); i += 4){
+            String[] group = new String[4];
+            group[0] = studentList.get(i);
+            group[1] = studentList.get(i + 1);
+            group[2] = studentList.get(i + 2);
+            group[3] = studentList.get(i + 3);
+            groups.add(group);
+        }
 
-        return new ArrayList<>();
+        return groups;
 
     }
     public ArrayList<String> loadList(){
@@ -75,7 +85,11 @@ public class RandomStudents {
 
     public static void main(String[] args){
 
-
+        RandomStudents rs = new RandomStudents();
+        rs.setSeed(300);
+        for(String[] s: rs.getRandomGroups()){
+            System.out.println(Arrays.toString(s));
+        }
 
     }
 }
