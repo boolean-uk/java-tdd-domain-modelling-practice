@@ -27,11 +27,11 @@ Implement a random student selector similar to the one used during lessons.
 
 Class Main
 
-| Class Variables | Methods | Scenarios                                | Output/Return |
-|-----------------|---------|------------------------------------------|---------------|
-|                 | menu()  | Menu shows the different functionalities | void          |
-|                 |         | of the program in terminal               |               |
-|                 |         |                                          |               |
+| Class Variables | Methods   | Scenarios                                | Output/Return |
+|-----------------|-----------|------------------------------------------|---------------|
+|                 | menu()    | Menu shows the different functionalities | void          |
+|                 |           | of the program in terminal               |               |
+|                 | program() |                                          | void          |
 
 
 
