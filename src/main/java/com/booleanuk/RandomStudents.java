@@ -21,7 +21,7 @@ public class RandomStudents {
     }
 
     public String getRandomStudent(){
-        return studentList.get(random.nextInt(0, studentList.size()));
+        return studentList.get(random.nextInt( studentList.size()));
     }
 
     public ArrayList<String[]> getRandomPairs(){
@@ -100,12 +100,11 @@ public class RandomStudents {
 
     }
     public String displayString(){
-        return """
-                Choose an option:
-                1. Select a random student.
-                2. Selected Random Pairs from Student List.
-                3. Select Random Groups from Student List
-                4. Exit program""";
+        return "Choose an option:\n" +
+               "1. Select a random student.\n" +
+               "2. Selected Random Pairs from Student List.\n" +
+               "3. Select Random Groups from Student List\n" +
+               "4. Exit program";
     }
 
 

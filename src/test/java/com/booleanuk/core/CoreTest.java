@@ -15,12 +15,11 @@ public class CoreTest {
     @Test
     public void testReturningMenuString(){
         RandomStudents rs = new RandomStudents();
-        String expected = """
-                Choose an option:
-                1. Select a random student.
-                2. Selected Random Pairs from Student List.
-                3. Select Random Groups from Student List
-                4. Exit program""";
+        String expected = "Choose an option:\n" +
+                          "1. Select a random student.\n" +
+                          "2. Selected Random Pairs from Student List.\n" +
+                          "3. Select Random Groups from Student List\n" +
+                          "4. Exit program";
         Assertions.assertEquals(expected, rs.displayString());
     }
     /* Test Use Case 2*/
@@ -115,32 +114,30 @@ public class CoreTest {
         deck.shuffleDeck(2003);
         Table table = new Table();
         table.createFourHands();
-        String expected = """
-       Spades King
-       Diamonds King
-       Hearts 7
-       Diamonds 2
-       Clubs 5
-
-       Spades 3
-       Clubs Queen
-       Clubs 2
-       Spades Queen
-       Spades Jack
-
-       Clubs Jack
-       Spades 5
-       Clubs King
-       Spades 7
-       Hearts King
-
-       Hearts 10
-       Spades 6
-       Diamonds 8
-       Spades 8
-       Diamonds 4
-       
-        """;
+        String expected = "Spades King\n" +
+                          "Diamonds King\n" +
+                          "Hearts 7\n" +
+                          "Diamonds 2\n" +
+                          "Clubs 5\n" +
+                          "\n" +
+                          "Spades 3\n" +
+                          "Clubs Queen\n" +
+                          "Clubs 2\n" +
+                          "Spades Queen\n" +
+                          "Spades Jack\n" +
+                          "\n" +
+                          "Clubs Jack\n" +
+                          "Spades 5\n" +
+                          "Clubs King\n" +
+                          "Spades 7\n" +
+                          "Hearts King\n" +
+                          "\n" +
+                          "Hearts 10\n" +
+                          "Spades 6\n" +
+                          "Diamonds 8\n" +
+                          "Spades 8\n" +
+                          "Diamonds 4\n" +
+                          "\n";
         Assertions.assertEquals(expected, table.viewHandsAsString());
 
     }
