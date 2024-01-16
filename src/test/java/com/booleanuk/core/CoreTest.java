@@ -19,38 +19,35 @@ public class CoreTest {
     }
 
     @Test
-    public void canFetchStudentsFromFile() {
+    public void canFetchStudentsFromFile() throws FileNotFoundException {
         StudentRandomizer studentRandomizer = new StudentRandomizer("students");
-        Assertions.assertDoesNotThrow(studentRandomizer::fetchStudentsFromFile);
         Assertions.assertEquals(getTestList(), studentRandomizer.getStudents());
     }
 
     @Test
     public void throwsErrorIfFileDoesNotExist() {
-        StudentRandomizer studentRandomizer = new StudentRandomizer("not-students");
-        Assertions.assertThrows(FileNotFoundException.class, studentRandomizer::fetchStudentsFromFile);
-    }
+        Assertions.assertThrows(FileNotFoundException.class, () -> new StudentRandomizer("not-students"));}
 
     @Test
-    public void getsRandomStudent_SameSeed() {
+    public void getsRandomStudent_SameSeed() throws FileNotFoundException {
         int seed = 70999;
         ArrayList<String> testStudents = getTestList();
-        StudentRandomizer studentRandomizer = new StudentRandomizer("students");
+        StudentRandomizer studentRandomizer = new StudentRandomizer("students", seed);
         Random random = new Random(seed);
         int bound = testStudents.size();
 
-        Assertions.assertEquals(getTestList().get(random.nextInt(bound)), studentRandomizer.getRandomStudent(seed));
+        Assertions.assertEquals(getTestList().get(random.nextInt(bound)), studentRandomizer.getRandomStudent());
     }
 
     @Test
-    public void getsRandomStudent_DifferentSeed() {
+    public void getsRandomStudent_DifferentSeed() throws FileNotFoundException {
         int seed = 70999;
         int otherSeed = 54322;
         ArrayList<String> testStudents = getTestList();
-        StudentRandomizer studentRandomizer = new StudentRandomizer("students");
+        StudentRandomizer studentRandomizer = new StudentRandomizer("students", otherSeed);
         Random random = new Random(seed);
         int bound = testStudents.size();
 
-        Assertions.assertNotEquals(getTestList().get(random.nextInt(bound)), studentRandomizer.getRandomStudent(otherSeed));
+        Assertions.assertNotEquals(getTestList().get(random.nextInt(bound)), studentRandomizer.getRandomStudent());
     }
 }
