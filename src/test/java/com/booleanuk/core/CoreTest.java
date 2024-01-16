@@ -12,9 +12,12 @@ public class CoreTest {
     @Test
     public void testReturningMenuString(){
         RandomStudents rs = new RandomStudents();
-        String expected = "Choose an option:\n" + "1. Select a random student.\n"
-                + "2. Selected Random Pairs from Student List.\n" + "3. Select Random Groups from Student List\n"
-                + "4. Exit program";
+        String expected = """
+                Choose an option:
+                1. Select a random student.
+                2. Selected Random Pairs from Student List.
+                3. Select Random Groups from Student List
+                4. Exit program""";
         Assertions.assertEquals(expected, rs.displayString());
     }
 
