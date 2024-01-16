@@ -6,10 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class CoreTest {
@@ -74,9 +71,9 @@ public class CoreTest {
     public void testMakeListFromFile() {
         Main main = new Main();
 
-        ArrayList<String> listOfStudents =  main.makeListFromFile();
+        main.makeListFromFile();
 
-        Assertions.assertEquals("Ateeb Salam", listOfStudents.get(0));
+        Assertions.assertEquals("Ateeb Salam", main.getListOfStudents.get(0));
 
     }
 
