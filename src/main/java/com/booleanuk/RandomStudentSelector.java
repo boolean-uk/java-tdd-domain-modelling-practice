@@ -5,9 +5,24 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class RandomStudentSelector {
+    Scanner scanner = new Scanner(System.in);
 
     public Random randomiser = new Random();
     public ArrayList<String> students = new ArrayList<>(Arrays.asList("A", "B", "C", "D", "E"));
+
+    public RandomStudentSelector() {}
+
+    public RandomStudentSelector(String filePath) throws FileNotFoundException {
+        loadFile(filePath);
+        showMenu();
+        String input = scanner.nextLine();
+        switch(input) {
+            case "A" -> System.out.println(getRandomStudent());
+            case "B" -> System.out.println(getRandomPairs());
+            case "C" -> System.out.println(getRandomGroups());
+            default -> System.out.println("Unexpected value: " + input);
+        }
+    }
     public String showMenu() {
         return "Welcome! /n/nPlease select an option./n/nA. Get a random student./nB. " +
                 "Get randomised pairs./nC. Get randomised groups of four.";
