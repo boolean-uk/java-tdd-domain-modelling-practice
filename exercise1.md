@@ -44,5 +44,6 @@ Random Student Selector Class
 | Chooses option for random pairs. Uneven number of students. | Outputs randomly chosen pairs of students. Last student will be printed alone on the last row.            |
 | Chooses option for random groups. Divisible by 4.           | Outputs randomly chosen groups of students.                                                               |
 | Chooses option for random groups. Not divisible by 4.       | Outputs randomly chosen groups of students. Last group will be printed on the last row with < 4 students. |
+| Loads a text file in to the program with student names.     | Saves the student names to listOfNames for later use.                                                     |
 
 

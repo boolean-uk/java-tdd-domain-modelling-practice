@@ -9,8 +9,13 @@ public class RandomStudentSelectorTest {
 
     @Test
     public void testGetRandomStudent() {
-        RandomStudentSelector selector = new RandomStudentSelector();
-        selector.randomiser = new Random(50);
-        Assertions.assertEquals(selector.listOfNames[0], selector.getRandomStudent());
+        String[] students = {"Gustav", "Alexandra", "Alex", "Sebastian"};
+
+        RandomStudentSelector selector = new RandomStudentSelector(students);
+        selector.randomiser = new Random(500);
+        Assertions.assertEquals(selector.listOfNames[3], selector.getRandomStudent());
     }
+
+
+
 }
