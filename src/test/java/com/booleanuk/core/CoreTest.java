@@ -25,7 +25,7 @@ public class CoreTest {
     public  void testOptionRandomStudentPairs(){
         Main main = new Main();
         Random random = new Random(100);
-        Assertions.assertEquals(main.lisOfNames[1]+main.lisOfNames[0],main.getRandomStudents());
+        Assertions.assertEquals(main.lisOfNames[1]+main.lisOfNames[4],main.returnPairs());
     }
 
 

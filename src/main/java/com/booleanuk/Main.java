@@ -20,8 +20,9 @@ public class Main {
     public String returnPairs(){
         int teller = 0;
         String out = "";
-        while(teller < 3){
+        while(teller < 2){
             out += this.lisOfNames[this.randomizer.nextInt(this.lisOfNames.length)];
+            teller++;
         }
         return out;
     }
