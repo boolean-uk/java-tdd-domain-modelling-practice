@@ -36,7 +36,7 @@
 5. When I run the program it should load the list of current students from a text file.
 ```
 
-| Classes        | Methods    | Scenario    | Returns                                |
-|----------------|------------|-------------|----------------------------------------|
-| RandomStudents | loadList() | Run program | ArrayList containing names of students |
-|                |            |             |                                        |
+| Classes        | Methods           | Scenario    | Returns                                |
+|----------------|-------------------|-------------|----------------------------------------|
+| RandomStudents | String loadList() | Run program | ArrayList containing names of students |
+|                |                   |             |                                        |

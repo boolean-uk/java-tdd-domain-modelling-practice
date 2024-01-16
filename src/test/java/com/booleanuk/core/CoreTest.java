@@ -20,5 +20,21 @@ public class CoreTest {
                 4. Exit program""";
         Assertions.assertEquals(expected, rs.displayString());
     }
+    /* Test Use Case 2*/
+    @Test
+    public void testGetRandomStudent(){
+
+    }
+
+
+
+    /* Test Use Case 5 */
+    @Test
+    public void testCorrectReadListFirstFiveNames(){
+        RandomStudents rs = new RandomStudents();
+        Assertions.assertEquals("Ethan Thompson", rs.loadList().get(0));
+
+
+    }
 
 }

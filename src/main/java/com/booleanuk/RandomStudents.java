@@ -1,7 +1,20 @@
 package com.booleanuk;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class RandomStudents {
 
+    ArrayList<String> studentList;
+
+    public RandomStudents(){
+
+    }
+    public ArrayList<String> loadList(){
+        studentList = new ArrayList<String>();
+        studentList.add("Stefan");
+        return studentList;
+    }
     public String displayString(){
         return """
                 Choose an option:
@@ -10,6 +23,7 @@ public class RandomStudents {
                 3. Select Random Groups from Student List
                 4. Exit program""";
     }
+
 
     public void main(String[] args){
 
