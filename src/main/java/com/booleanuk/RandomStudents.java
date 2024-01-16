@@ -13,6 +13,11 @@ public class RandomStudents {
     public RandomStudents(){
         studentList = loadList();
     }
+
+
+    public String getRandomStudent(){
+        return "";
+    }
     public ArrayList<String> loadList(){
         ArrayList<String> arr = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("src\\main\\java\\com\\booleanuk\\students.txt"))) {

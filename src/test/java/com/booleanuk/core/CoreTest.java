@@ -4,6 +4,8 @@ import com.booleanuk.RandomStudents;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Random;
+
 public class CoreTest {
 
     /* Tests for testing RandomStudents - Domain model 1 */
@@ -23,7 +25,8 @@ public class CoreTest {
     /* Test Use Case 2*/
     @Test
     public void testGetRandomStudent(){
-
+        RandomStudents rs = new RandomStudents();
+        Assertions.assertEquals("Thomas ", rs.getRandomStudent());
     }
 
 
