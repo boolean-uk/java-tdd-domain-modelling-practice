@@ -10,7 +10,7 @@ public class RandomStudentSelector {
     public ArrayList<String> listOfNames;
 
     public RandomStudentSelector(ArrayList<String> students) {
-        this.randomiser = new Random();
+        this.randomiser = new Random(500);
         this.listOfNames = students;
     }
 
@@ -62,8 +62,8 @@ public class RandomStudentSelector {
 
     /* Main function for testing different seeds. */
     public static void main(String[] args) {
-        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina", "Hanna", "Elias", "Zuzanna"));
-        ArrayList<String> firstGroup = new ArrayList<>(Arrays.asList("Sebastian", "Hanna", "Gustav", "Zuzanna"));
+        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina",
+                "Hanna", "Elias", "Zuzanna", "Matilda", "Oskar"));
 
         RandomStudentSelector studentSelector = new RandomStudentSelector(students);
 
