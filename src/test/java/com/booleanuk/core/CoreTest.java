@@ -37,6 +37,16 @@ public class CoreTest {
         Assertions.assertEquals(new ArrayList<String>(Arrays.asList("C & F", "D & E", "A & B")), randomStudentSelector.getRandomPairs());
         Assertions.assertEquals(new ArrayList<String>(Arrays.asList("B & D", "E & A", "F & C")), randomStudentSelector.getRandomPairs());
     }
+
+    @Test
+    public void testGetRandomGroups() {
+        RandomStudentSelector randomStudentSelector = new RandomStudentSelector();
+        randomStudentSelector.randomiser = new Random(100);
+        randomStudentSelector.students = new ArrayList<>(Arrays.asList("A", "B", "C", "D", "E", "F", "G"));
+
+        Assertions.assertEquals(new ArrayList<String>(Arrays.asList("C & F", "D & E", "A & B")), randomStudentSelector.getRandomGroups());
+        Assertions.assertEquals(new ArrayList<String>(Arrays.asList("B & D", "E & A", "F & C")), randomStudentSelector.getRandomGroups());
+    }
 }
 
 
