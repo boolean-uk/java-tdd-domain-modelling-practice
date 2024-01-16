@@ -50,4 +50,17 @@ public class CoreTest {
 
         Assertions.assertNotEquals(getTestList().get(random.nextInt(bound)), studentRandomizer.getRandomStudent());
     }
+
+    @Test
+    public void getsRandomPairsGetsTheCorrectAmountOfPairs() throws FileNotFoundException {
+        int seed = 70999;
+        StudentRandomizer studentRandomizer = new StudentRandomizer("students", seed);
+
+        int studentCount = studentRandomizer.getStudents().size();
+        if (studentCount % 2 == 0) {
+            Assertions.assertEquals(studentCount / 2, studentRandomizer.getRandomPairs().size());
+        } else {
+            Assertions.assertEquals((studentCount / 2) + 1, studentRandomizer.getRandomPairs().size());
+        }
+    }
 }
