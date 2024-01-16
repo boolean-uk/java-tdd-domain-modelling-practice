@@ -78,4 +78,17 @@ public class RandomStudentSelectorTest {
         Assertions.assertEquals(3, studentGroups.size());
     }
 
+    @Test
+    public void testGetTextFromFile() {
+        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina",
+                "Hanna", "Elias", "Zuzanna", "Matilda", "Oskar"));
+
+        RandomStudentSelector selector = new RandomStudentSelector(students);
+        selector.randomiser = new Random(500);
+
+        String filePath = "resources/icecreamTopping.txt";
+        selector.loadTextFile(filePath);
+        Assertions.assertEquals(students, selector.listOfNames);
+    }
+
 }
