@@ -32,7 +32,12 @@ public class CoreTest {
     @Test
     public void testCorrectReadListFirstFiveNames(){
         RandomStudents rs = new RandomStudents();
-        Assertions.assertEquals("Ethan Thompson", rs.loadList().get(0));
+        Assertions.assertEquals("Ethan Thompson", rs.studentList.get(0));
+        Assertions.assertEquals("Olivia Rodriguez", rs.studentList.get(1));
+        Assertions.assertEquals("Mason Foster", rs.studentList.get(2));
+        Assertions.assertEquals("Ava Mitchell", rs.studentList.get(3));
+        Assertions.assertEquals("Liam Turner", rs.studentList.get(4));
+
 
 
     }

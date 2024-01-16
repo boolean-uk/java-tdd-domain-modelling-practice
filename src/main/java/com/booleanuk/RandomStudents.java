@@ -1,19 +1,30 @@
 package com.booleanuk;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class RandomStudents {
 
-    ArrayList<String> studentList;
+    public ArrayList<String> studentList;
 
     public RandomStudents(){
-
+        studentList = loadList();
     }
     public ArrayList<String> loadList(){
-        studentList = new ArrayList<String>();
-        studentList.add("Stefan");
-        return studentList;
+        ArrayList<String> arr = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader("src\\main\\java\\com\\booleanuk\\students.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                arr.add(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
     }
     public String displayString(){
         return """
