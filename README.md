@@ -23,6 +23,20 @@ Implement a random student selector similar to the one used during lessons.
 5. When I run the program it should load the list of current students from a text file.
 ```
 
+## 1
+
+Class Main
+
+| Class Variables | Methods | Scenarios                                | Output/Return |
+|-----------------|---------|------------------------------------------|---------------|
+|                 | menu()  | Menu shows the different functionalities | void          |
+|                 |         | of the program in terminal               |               |
+|                 |         |                                          |               |
+
+
+
+
+
 ## Exercise 2
 
 Thinking about the Poker Challenge implement a deck of cards (52 cards - 4 suits - 13 cards per suit)
