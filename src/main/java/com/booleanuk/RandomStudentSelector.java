@@ -26,6 +26,9 @@ public class RandomStudentSelector {
         while (currentSize != 0) {
             ArrayList<String> newPair = new ArrayList<>();
             for (int i = 0; i < 2; i++) {
+                if (currentSize == 0) {
+                    break;
+                }
                 randomNumber = this.randomiser.nextInt(currentSize);
                 newPair.add(this.listOfNames.get(randomNumber));
                 this.listOfNames.remove(randomNumber);
@@ -39,11 +42,15 @@ public class RandomStudentSelector {
     /* Main function for testing different seeds. */
     public static void main(String[] args) {
         ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina"));
-        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Sebastian", "Alex"));
+        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Gustav", "Alexandra"));
 
         RandomStudentSelector studentSelector = new RandomStudentSelector(students);
 
-        System.out.println(studentSelector.getRandomPairs());
+        ArrayList<ArrayList<String>> pairs = studentSelector.getRandomPairs();
+
+        System.out.println(pairs.size());
+
+        System.out.println(pairs);
 
         /*for (int i = 0; i < 5; i++) {
             System.out.println(studentSelector.getRandomStudent());

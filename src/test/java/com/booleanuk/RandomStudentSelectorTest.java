@@ -31,16 +31,18 @@ public class RandomStudentSelectorTest {
     @Test
     public void testGetRandomPairsUnevenNumber() {
         ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina"));
-        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Sebastian", "Hanna"));
+        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Gustav", "Alexandra"));
 
         RandomStudentSelector selector = new RandomStudentSelector(students);
         selector.randomiser = new Random(500);
 
-        Assertions.assertEquals(firstPair, selector.getRandomPairs().get(0));
+        ArrayList<ArrayList<String>> studentPairs = selector.getRandomPairs();
 
-        Assertions.assertEquals(3, selector.getRandomPairs().size());
+        Assertions.assertEquals(firstPair, studentPairs.get(0));
 
-        Assertions.assertEquals("Alex", selector.getRandomPairs().get(2).get(0));
+        Assertions.assertEquals("Sebastian", studentPairs.get(2).get(0));
+
+        Assertions.assertEquals(3, studentPairs.size());
     }
 
 }
