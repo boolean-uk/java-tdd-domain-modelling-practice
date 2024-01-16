@@ -156,4 +156,18 @@ public class CoreTest {
         String expected = new Card("Diamonds", "5").getCardInfo();
         Assertions.assertEquals(expected, deck.seeTopCard().getCardInfo());
     }
+
+    /* Test user story 7*/
+    @Test
+    public void testCutCardAndSeeArbitraryPoint() {
+        Deck.resetInstance();
+        Deck deck = Deck.getInstance();
+        deck.shuffleDeck(400);
+        String expected = new Card("Diamonds", "2").getCardInfo();
+        Assertions.assertEquals(expected, deck.cutDeck(20, "Bottom").getCardInfo());
+    }
+
 }
+
+
+

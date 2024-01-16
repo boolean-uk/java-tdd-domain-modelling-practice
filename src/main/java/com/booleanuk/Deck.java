@@ -2,6 +2,7 @@ package com.booleanuk;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Deck {
@@ -68,5 +69,20 @@ public class Deck {
 
     public ArrayList<Card> getDeck(){
         return deck;
+    }
+
+    public Card cutDeck(int point, String topOrBottom){
+        List<Card> cutDeck = new ArrayList<>(deck.subList(point, deck.size()));
+        deck.addAll(cutDeck);
+        deck.subList(point, point + cutDeck.size()).clear();
+
+        if(topOrBottom.equals("Top")){
+            return deck.get(deck.size()-1);
+        }
+        else if(topOrBottom.equals("Bottom")){
+            return deck.get(0);
+        }
+
+    return null;
     }
 }
