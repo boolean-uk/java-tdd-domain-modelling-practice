@@ -25,6 +25,7 @@ public class RandomStudentSelectorTest {
 
         RandomStudentSelector selector = new RandomStudentSelector(students);
         selector.randomiser = new Random(500);
+
         Assertions.assertEquals(firstPair, selector.getRandomPairs().get(0));
     }
 
@@ -43,6 +44,19 @@ public class RandomStudentSelectorTest {
         Assertions.assertEquals("Sebastian", studentPairs.get(2).get(0));
 
         Assertions.assertEquals(3, studentPairs.size());
+    }
+
+    @Test
+    public void testGetRandomFourGroupsDivisibleByFour() {
+        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina", "Hanna", "Elias", "Zuzanna"));
+        ArrayList<String> firstGroup = new ArrayList<>(Arrays.asList("Sebastian", "Hanna", "Gustav", "Zuzanna"));
+
+        RandomStudentSelector selector = new RandomStudentSelector(students);
+        selector.randomiser = new Random(500);
+
+        ArrayList<ArrayList<String>> studentGroups = selector.getRandomFourGroups();
+
+        Assertions.assertEquals(firstGroup, studentGroups.get(0));
     }
 
 }
