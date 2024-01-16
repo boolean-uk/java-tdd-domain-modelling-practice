@@ -1,14 +1,20 @@
 
 
-| Class Member       | Method          | Scenario                                | Output    |
-|--------------------|-----------------|-----------------------------------------|-----------|
-| String[]  students | userMenu()      | Shows the user options for the program. |           |
-|                    |                 | Take user input, verify its valid.      | userInput |
-|                    |                 |                                         |           |
-|                    | randomStudent() | Generates random number and uses it to  | student   |
-|                    |                 | pick a student from the array           |           |
-|                    |                 |                                         |           |
-|                    |                 |                                         |           |
+| Class Member            | Method               | Scenario                                | Output       |
+|-------------------------|----------------------|-----------------------------------------|--------------|
+| String[]  students      | userMenu()           | Shows the user options for the program. |              |
+|                         |                      | Take user input, verify its valid.      | userInput    |
+|                         |                      |                                         |              |
+|                         | randomStudent()      | Generates random number and uses it to  | student      |
+|                         |                      | pick a student from the array           |              |
+|                         |                      |                                         |              |
+| String[][] student      | randomStudentPairs() | Randomly select one and one student and | studentPairs |
+| boolean[] studentPaired |                      | add to pairs. Paired students gets      |              |
+|                         |                      | true in bool array. Lastly resets the   |              |
+|                         |                      | bool array                              |              |
+|                         |                      |                                         |              |
+|                         |                      |                                         |              |
+|                         |                      |                                         |              |
 
 
 1. When I run the program I see a menu giving me options to use each of the functions of the program.
