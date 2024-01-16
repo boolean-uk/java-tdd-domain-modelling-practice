@@ -1,18 +1,34 @@
 package com.booleanuk;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class RandomStudentSelector {
 
     public Random randomiser = new Random();
-    public String[] students = {"A", "B", "C", "D", "E"};
+    public ArrayList<String> students = new ArrayList<>(Arrays.asList("A", "B", "C", "D", "E"));
     public String showMenu() {
         return "Welcome! /n/nPlease select an option./n/nA. Get a random student./nB. " +
                 "Get randomised pairs./nC. Get randomised groups of four.";
     }
 
     public String getRandomStudent() {
-        return students[randomiser.nextInt(students.length)];
+        return students.get(randomiser.nextInt(students.size()));
+    }
+
+    public ArrayList<String> getRandomPairs() {
+        ArrayList<String> res = new ArrayList<>();
+        Collections.shuffle(students, randomiser);
+        String pair;
+
+        for(int i = 0; i < students.size(); i+=2) {
+            pair = "";
+            pair += students.get(i);
+            if(i + 1 < students.size()) {
+                pair += " & " + students.get(i+1);
+            }
+            res.add(pair);
+        }
+
+        return res;
     }
 }

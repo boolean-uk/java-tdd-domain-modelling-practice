@@ -4,6 +4,8 @@ import com.booleanuk.RandomStudentSelector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class CoreTest {
@@ -30,11 +32,10 @@ public class CoreTest {
     public void testGetRandomPairs() {
         RandomStudentSelector randomStudentSelector = new RandomStudentSelector();
         randomStudentSelector.randomiser = new Random(100);
-        Assertions.assertEquals("A", randomStudentSelector.getRandomPairs());
-        Assertions.assertEquals("A", randomStudentSelector.getRandomPairs());
-        Assertions.assertEquals("E", randomStudentSelector.getRandomPairs());
-        Assertions.assertEquals("D", randomStudentSelector.getRandomPairs());
-        Assertions.assertEquals("B", randomStudentSelector.getRandomPairs());
+        randomStudentSelector.students = new ArrayList<>(Arrays.asList("A", "B", "C", "D", "E", "F"));
+
+        Assertions.assertEquals(new ArrayList<String>(Arrays.asList("C & F", "D & E", "A & B")), randomStudentSelector.getRandomPairs());
+        Assertions.assertEquals(new ArrayList<String>(Arrays.asList("B & D", "E & A", "F & C")), randomStudentSelector.getRandomPairs());
     }
 }
 
