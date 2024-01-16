@@ -39,6 +39,16 @@ public class RandomStudentSelector {
         return pairs;
     }
 
+    public ArrayList<ArrayList<String>> getRandomFourGroups() {
+        int currentSize = this.listOfNames.size();
+        ArrayList<ArrayList<String>> groups = new ArrayList<>();
+        int randomNumber;
+
+
+
+        return groups;
+    }
+
     /* Main function for testing different seeds. */
     public static void main(String[] args) {
         ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina"));
