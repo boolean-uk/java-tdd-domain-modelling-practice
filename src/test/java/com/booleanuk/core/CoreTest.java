@@ -41,5 +41,8 @@ public class CoreTest {
 
         main.program();
 
+        Assertions.assertEquals("Welcome to the menu", outputStreamCaptor.toString()
+                .trim());
+
     }
 }
