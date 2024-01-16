@@ -41,7 +41,7 @@ public class CoreTest {
 	@Test
 	public void showStudentsTest(){
 		Main main = new Main();
-		Assertions.assertEquals("Asda Asdson\nBob Bobsson\nClara Cluir\nDavid Dill\nErik Ek\n",main.showStudents());
+		Assertions.assertEquals("Asda Asdson\nBob Bobsson\nClara Cluir\nDavid Dill\nErik Ek",main.showStudents());
 	}
 	@Test
 	public void showMenueTest(){
