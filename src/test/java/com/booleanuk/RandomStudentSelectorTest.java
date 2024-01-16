@@ -16,6 +16,14 @@ public class RandomStudentSelectorTest {
         Assertions.assertEquals(selector.listOfNames[3], selector.getRandomStudent());
     }
 
+    @Test
+    public void testGetRandomPairsEvenNumber() {
+        String[] students = {"Gustav", "Alexandra", "Alex", "Sebastian", "Paulina", "Hanna"};
+        String[] firstPair = {"Alex", "Hanna"};
 
+        RandomStudentSelector selector = new RandomStudentSelector(students);
+        selector.randomiser = new Random(500);
+        Assertions.assertEquals(firstPair, selector.getRandomPairs());
+    }
 
 }

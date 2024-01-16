@@ -28,18 +28,17 @@ it should load the list of current students from a text file.
 ```
 Random Student Selector Class
 
-| Methods                 | Member Variables     |
-|-------------------------|----------------------|
-| printRandomStudent()    | String[] listOfNames |
-| printRandomPairs()      | Random randomiser    |
-| printRandomFourGroups() |                      |
-| loadTextFile()          |                      |
-| startProgram()          |                      |
+| Methods               | Member Variables     |
+|-----------------------|----------------------|
+| getRandomStudent()    | String[] listOfNames |
+| getRandomPairs()      | Random randomiser    |
+| getRandomFourGroups() |                      |
+| loadTextFile()        |                      |
+| startProgram()        |                      |
 
 | Scenario                                                    | Return Value/Output/Result                                                                                |
 |-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Chooses option for random student.                          | Outputs name of a random student.                                                                         |
-| Chooses option for random student twice.                    | With the right seed, outputs name of two different students.                                              |
 | Chooses option for random pairs. Even number of students.   | Outputs randomly chosen pairs of students.                                                                |
 | Chooses option for random pairs. Uneven number of students. | Outputs randomly chosen pairs of students. Last student will be printed alone on the last row.            |
 | Chooses option for random groups. Divisible by 4.           | Outputs randomly chosen groups of students.                                                               |
