@@ -12,11 +12,12 @@ public class RandomStudentSelector {
     }
 
     public void showMenu() {
-        String menu = "This is a random student selector.\n" +
-                "S: Get random student.\n" +
-                "P: Get random pairs.\n" +
-                "G: Get random pair groups.\n" +
-                "X: Exit program.";
+        String menu = """
+                This is a random student selector.
+                S: Get random student.
+                P: Get random pairs.
+                G: Get random pair groups.
+                X: Exit program.""";
         System.out.println(menu);
     }
 
