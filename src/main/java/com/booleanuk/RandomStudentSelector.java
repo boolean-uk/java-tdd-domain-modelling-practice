@@ -38,8 +38,8 @@ public class RandomStudentSelector {
 
     /* Main function for testing different seeds. */
     public static void main(String[] args) {
-        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina", "Hanna"));
-        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Sebastian", "Hanna"));
+        ArrayList<String> students = new ArrayList<>(Arrays.asList("Gustav", "Alexandra", "Alex", "Sebastian", "Paulina"));
+        ArrayList<String> firstPair = new ArrayList<>(Arrays.asList("Sebastian", "Alex"));
 
         RandomStudentSelector studentSelector = new RandomStudentSelector(students);
 
