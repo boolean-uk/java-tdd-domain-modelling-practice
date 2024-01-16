@@ -1,12 +1,19 @@
 package com.booleanuk;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Student {
+    public String[] students = {"Tonnes", "Sander", "Enock", "Jenny", "Julie", "Tor"};
     Scanner input = new Scanner(System.in);
+    public Random randomiser;
 
     public Student(){
-        System.out.println("s");
+        this.randomiser = new Random();
+    }
+
+    public String randomStudent() {
+        return students[randomiser.nextInt(students.length)];
     }
 
 

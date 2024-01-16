@@ -1,14 +1,14 @@
 
 
-| Class Member     | Method     | Scenario                       | Output    |
-|------------------|------------|--------------------------------|-----------|
-| String userInput | userMenu() | Shows the user options for the | userInput |
-|                  |            | program                        |           |
-|                  |            |                                |           |
-|                  |            |                                |           |
-|                  |            |                                |           |
-|                  |            |                                |           |
-|                  |            |                                |           |
+| Class Member       | Method          | Scenario                                | Output    |
+|--------------------|-----------------|-----------------------------------------|-----------|
+| String[]  students | userMenu()      | Shows the user options for the program. |           |
+|                    |                 | Take user input, verify its valid.      | userInput |
+|                    |                 |                                         |           |
+|                    | randomStudent() | Generates random number and uses it to  | student   |
+|                    |                 | pick a student from the array           |           |
+|                    |                 |                                         |           |
+|                    |                 |                                         |           |
 
 
 1. When I run the program I see a menu giving me options to use each of the functions of the program.
@@ -20,5 +20,4 @@
 4. When I select the option it will output a random list of Peer Groups for all of the students (groups of 4 students).
 
 5. When I run the program it should load the list of current students from a text file.
-6. 
 
