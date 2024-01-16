@@ -41,4 +41,9 @@ public class Main {
 
         return "";
     }
+
+    public ArrayList<String> makeListFromFile() {
+
+        return new ArrayList<String>();
+    }
 }
