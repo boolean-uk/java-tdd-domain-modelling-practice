@@ -19,7 +19,11 @@ public class CoreTest {
     public void testGetRandomStudent() {
         RandomStudentSelector randomStudentSelector = new RandomStudentSelector();
         randomStudentSelector.randomiser = new Random(100);
-        Assertions.assertEquals("", randomStudentSelector.getRandomStudent());
+        Assertions.assertEquals("A", randomStudentSelector.getRandomStudent());
+        Assertions.assertEquals("A", randomStudentSelector.getRandomStudent());
+        Assertions.assertEquals("E", randomStudentSelector.getRandomStudent());
+        Assertions.assertEquals("D", randomStudentSelector.getRandomStudent());
+        Assertions.assertEquals("B", randomStudentSelector.getRandomStudent());
     }
 }
 
