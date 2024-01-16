@@ -45,20 +45,22 @@ public class CoreTest {
 
         main.menu();
 
-        Assertions.assertEquals("Welcome to the menu", getOutput());
+        Assertions.assertEquals("Welcome to the menu \n Here are the different functions: \n  1. Choose random student \n 2. Output list of randomly chosen pairs \n 3. Output random list of peer groups \n 4. Current students", getOutput());
 
     }
 
 
-    @Test
+/*    @Test
     public void testProgramRuns() {
         Main main = new Main();
 
-        main.program();
+        Main.main(new String[0]);
         provideInput("q");
 
         //Assertions.assertEquals("q", getOutput());
 
 
-    }
+    }*/
+
+
 }

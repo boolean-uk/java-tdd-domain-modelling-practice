@@ -6,6 +6,7 @@ public class Main {
     public void menu() {
 
         System.out.println("Welcome to the menu");
+
     }
 
 
@@ -27,4 +28,6 @@ public class Main {
         Main main = new Main();
         main.program();
     }
+
+
 }
