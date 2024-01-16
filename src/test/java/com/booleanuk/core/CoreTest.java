@@ -47,6 +47,14 @@ public class CoreTest {
         Assertions.assertEquals(new ArrayList<String>(Arrays.asList("D, A, B & G", "F, E & C")), randomStudentSelector.getRandomGroups());
         Assertions.assertEquals(new ArrayList<String>(Arrays.asList("F, D, A & E", "C, B & G")), randomStudentSelector.getRandomGroups());
     }
+
+    @Test
+    public void testLoadFile() {
+        RandomStudentSelector randomStudentSelector = new RandomStudentSelector();
+        ArrayList<String> students = new ArrayList<>(Arrays.asList("P", "Q", "R", "S"));
+        randomStudentSelector.loadFile("students.txt");
+        Assertions.assertEquals(students, randomStudentSelector.students);
+    }
 }
 
 
