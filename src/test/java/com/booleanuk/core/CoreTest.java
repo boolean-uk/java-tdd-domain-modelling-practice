@@ -66,7 +66,7 @@ public class CoreTest {
 
         String randomStudent = main.getRandomStudent();
 
-        main.rand = new Random(100);
+        main.setRand(new Random(100));
 
         Assertions.assertEquals(main.getListOfStudents().get(1), randomStudent);
     }

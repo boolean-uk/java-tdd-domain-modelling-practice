@@ -42,7 +42,7 @@ Class Main
 | Class Variables                  | Methods         | Scenarios                 | Output/Return           |
 |----------------------------------|-----------------|---------------------------|-------------------------|
 | ArrayList<String> listOfStudents | randomStudent() | Calculates random student | String getRandomStudent |
-|                                  |                 |                           |                         |
+| Random rand                      |                 |                           |                         |
 |                                  |                 |                           |                         |
 
 

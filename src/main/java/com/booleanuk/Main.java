@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 public class Main {
 
 
-
+    public Random rand;
     private ArrayList<String> listOfStudents;
 
     public void menu() {
