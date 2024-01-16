@@ -109,10 +109,4 @@ public class RandomStudents {
     }
 
 
-    public static void main(String[] args){
-
-        RandomStudents rs = new RandomStudents();
-        rs.displayOptions();
-
-    }
 }
