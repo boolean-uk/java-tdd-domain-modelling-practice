@@ -62,5 +62,10 @@ public class CoreTest {
 
     }*/
 
+    public void testGetRandomStudent() {
+        Main main = new Main();
+
+        String randomStudent = main.getRandomStudent();
+    }
 
 }

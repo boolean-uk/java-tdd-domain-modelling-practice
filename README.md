@@ -35,6 +35,18 @@ Class Main
 
 
 
+## 2
+
+Class Main
+
+| Class Variables                  | Methods         | Scenarios                 | Output/Return           |
+|----------------------------------|-----------------|---------------------------|-------------------------|
+| ArrayList<String> listOfStudents | randomStudent() | Calculates random student | String getRandomStudent |
+|                                  |                 |                           |                         |
+|                                  |                 |                           |                         |
+
+
+
 
 
 ## Exercise 2
