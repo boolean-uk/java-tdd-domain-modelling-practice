@@ -59,7 +59,7 @@ public class RandomStudents {
     }
     public ArrayList<String> loadList(){
         ArrayList<String> arr = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\\main\\java\\com\\booleanuk\\students.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/com/booleanuk/students.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 arr.add(line);
