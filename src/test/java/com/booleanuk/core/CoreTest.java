@@ -4,6 +4,7 @@ import com.booleanuk.RandomStudents;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CoreTest {
@@ -32,6 +33,16 @@ public class CoreTest {
         Assertions.assertEquals("Mason Foster", rs.getRandomStudent());
         Assertions.assertEquals("Lucas Sullivan", rs.getRandomStudent());
 
+    }
+
+    /* Test Use Case 3*/
+    @Test
+    public void testGetRandomPairs(){
+        RandomStudents rs = new RandomStudents();
+        rs.setSeed(200);
+        ArrayList<String> expected = new ArrayList<>();
+
+        Assertions.assertArrayEquals(expected.toArray(), rs.getRandomPairs().toArray());
     }
 
 
