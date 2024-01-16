@@ -31,7 +31,7 @@
 
 | Classes | Methods                          | Scenario      | Returns         |
 |---------|----------------------------------|---------------|-----------------|
-| Deck    | ArrayList<Hand>getHands(int num) | Method called | ArrayList<Hand> |
+| Table   | ArrayList<Hand>getHands(int num) | Method called | ArrayList<Hand> |
 
 
 ```

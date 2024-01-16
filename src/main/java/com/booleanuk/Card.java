@@ -9,6 +9,6 @@ public class Card {
     }
 
     public String getCardInfo(){
-        return "";
+        return this.suit + " " +  this.rank;
     }
 }

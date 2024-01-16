@@ -1,8 +1,6 @@
 package com.booleanuk.core;
 
-import com.booleanuk.Card;
-import com.booleanuk.Deck;
-import com.booleanuk.RandomStudents;
+import com.booleanuk.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -84,9 +82,38 @@ public class CoreTest {
     /*Tests for user story 1 - 3 */
     @Test
     public void testShuffleDeckResult(){
-        Deck deck = new Deck();
+        Deck deck = Deck.getInstance();
         deck.shuffleDeck(200);
         ArrayList<Card> expected = deck.shuffleDeck(200);
         Assertions.assertArrayEquals(deck.getDeck().toArray(), expected.toArray());
+    }
+
+
+    /* Test user story 4 */
+    @Test
+    public void testCreateHand(){
+        Deck deck = Deck.getInstance();
+        deck.shuffleDeck(20032);
+        Hand hand = new Hand();
+        ArrayList<Card> expected = new ArrayList<>();
+        expected.add(new Card("Diamonds", "9"));
+        expected.add(new Card("Spades", "10"));
+        expected.add(new Card("Spades", "7"));
+        ArrayList<Card> actual = hand.createHand(3);
+        Assertions.assertEquals(expected.get(0).getCardInfo(), actual.get(0).getCardInfo() );
+        Assertions.assertEquals(expected.get(1).getCardInfo(), actual.get(1).getCardInfo() );
+        Assertions.assertEquals(expected.get(2).getCardInfo(), actual.get(2).getCardInfo() );
+
+    }
+
+    /* Test  user story 5*/
+    @Test
+    public void testCreateFourHandsWithFiveCards(){
+        Deck deck = Deck.getInstance();
+        deck.shuffleDeck(2003);
+        Table table = new Table();
+
+
+        Assertions.assertEquals(table.createFourHands(), null);
     }
 }

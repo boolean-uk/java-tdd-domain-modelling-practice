@@ -6,11 +6,31 @@ import java.util.Random;
 
 public class Deck {
     private ArrayList<Card> deck;
+    private static Deck instance;
+
     public Deck(){
         deck = generateDeck();
+
     }
+
+    public static Deck getInstance() {
+        if (instance == null) {
+            synchronized (Deck.class) {
+                if (instance == null) {
+                    instance = new Deck();
+                }
+            }
+        }
+        return instance;
+    }
+
     public ArrayList<Card>shuffleDeck(int seed){
-        Collections.shuffle(deck, new Random(seed));
+        ArrayList<Card> temp = deck;
+        Collections.shuffle(this.deck, new Random(seed));
+        return this.deck;
+    }
+    public ArrayList<Card>shuffleDeck(){
+        Collections.shuffle(deck, new Random());
         return deck;
     }
     public ArrayList<Card> generateDeck(){
@@ -23,9 +43,21 @@ public class Deck {
                 temp.add(new Card(suit, rank));
             }
         }
+
         return temp;
     }
+    public ArrayList<Card> getCards(int num){
+        ArrayList<Card> hand = new ArrayList<>();
+        if(deck.size() - num < 0){
+            return null;
+        }
+        for (int i = deck.size() - 1; i >= (deck.size() - num); i--) {
+            hand.add(deck.get(i));
 
+        }
+        deck.subList(deck.size() - num, deck.size()).clear();
+        return hand;
+    }
 
     public ArrayList<Card> getDeck(){
         return deck;
