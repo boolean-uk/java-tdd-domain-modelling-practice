@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Random;
 
 public class RandomStudentSelectorTest {
     private final PrintStream standardOut = System.out;
@@ -29,5 +30,14 @@ public class RandomStudentSelectorTest {
     @AfterEach
     public void tearDown() {
         System.setOut(standardOut);
+    }
+
+    @Test
+    public void testGetRandomStudent() {
+        RandomStudentSelector studentSelector = new RandomStudentSelector();
+        studentSelector.randomiser = new Random(1000);
+        Assertions.assertEquals(studentSelector.students[0], studentSelector.getRandomStudent());
+        Assertions.assertEquals(studentSelector.students[1], studentSelector.getRandomStudent());
+        Assertions.assertEquals(studentSelector.students[0], studentSelector.getRandomStudent());
     }
 }
