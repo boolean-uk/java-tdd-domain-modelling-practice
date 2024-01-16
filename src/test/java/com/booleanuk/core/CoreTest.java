@@ -37,10 +37,17 @@ public class CoreTest {
 
     /* Test Use Case 3*/
     @Test
-    public void testGetRandomPairs(){
+    public void testGetRandomFourPairs(){
         RandomStudents rs = new RandomStudents();
         rs.setSeed(200);
-        ArrayList<String> expected = new ArrayList<>();
+        ArrayList<String[]> expected = new ArrayList<>();
+        expected.add(new String[]{"Sophia Hayes", "Olivia Rodriguez"});
+        expected.add(new String[]{"Ethan Thompson", "Liam Turner"});
+        expected.add(new String[]{"Aiden Bennett", "Emma Parker"});
+        expected.add(new String[]{"Ava Mitchell", "Noah Anderson"});
+        expected.add(new String[]{"Mason Foster", ""});
+
+
 
         Assertions.assertArrayEquals(expected.toArray(), rs.getRandomPairs().toArray());
     }

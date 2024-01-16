@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
@@ -26,11 +27,20 @@ public class RandomStudents {
         return studentList.get(random.nextInt(0, studentList.size()));
     }
 
-    public ArrayList<String> getRandomPairs(){
+    public ArrayList<String[]> getRandomPairs(){
         Collections.shuffle(studentList, random);
-        ArrayList<String> pairs = new ArrayList<>();
+        ArrayList<String[]> pairs = new ArrayList<>();
+
         for(int i = 0; i < studentList.size(); i += 2){
-            pairs.add(studentList.get(i) + ", " + studentList.get(i+1));
+            String[] pair = new String[2];
+            pair[0] = studentList.get(i);
+            if(i + 1 < studentList.size()){
+                pair[1] = studentList.get(i + 1);
+            }
+            else{
+                pair[1] = "";
+            }
+            pairs.add(pair);
         }
         return pairs;
     }
@@ -57,7 +67,7 @@ public class RandomStudents {
     }
 
 
-    public void main(String[] args){
+    public static void main(String[] args){
 
 
 
