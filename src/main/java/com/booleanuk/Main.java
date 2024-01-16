@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 public class Main {
 
 
-    public Random rand;
+    private Random rand;
     private ArrayList<String> listOfStudents;
 
     public void menu() {
@@ -83,5 +83,9 @@ public class Main {
             makeListFromFile();
         }
         return this.listOfStudents;
+    }
+
+    public void setRand(Random random) {
+        this.rand = random;
     }
 }
