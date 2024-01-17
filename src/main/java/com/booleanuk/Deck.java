@@ -32,11 +32,11 @@ public class Deck {
         }
     }
 
-    private void shuffle() {
+    public void shuffle() {
         Collections.shuffle(cards, randomiser);
     }
 
     public ArrayList<Card> createHand(int noOfCards) {
-        return new ArrayList<>();
+        return new ArrayList<Card>(cards.subList(0, noOfCards));
     }
 }
