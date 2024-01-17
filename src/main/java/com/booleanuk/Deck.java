@@ -12,6 +12,7 @@ public class Deck {
     public Deck() {
         randomiser = new Random();
         create();
+        shuffle();
     }
 
     public Deck(Random randomiser) {
