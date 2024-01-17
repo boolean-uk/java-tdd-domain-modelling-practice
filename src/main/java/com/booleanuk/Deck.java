@@ -39,4 +39,8 @@ public class Deck {
     public ArrayList<Card> createHand(int noOfCards) {
         return new ArrayList<Card>(cards.subList(0, noOfCards));
     }
+
+    public ArrayList<ArrayList<Card>> deal(int noOfHands, int noOfCards) {
+        return new ArrayList<ArrayList<Card>>();
+    }
 }

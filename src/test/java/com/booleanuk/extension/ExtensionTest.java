@@ -29,7 +29,7 @@ public class ExtensionTest {
 
     @Test
     public void createHandTest() {
-        Deck deck = new Deck(new Random(100));
+        Deck deck = new Deck();
         ArrayList<Card> hand5 = deck.createHand(5);
         ArrayList<Card> hand7 = deck.createHand(7);
         ArrayList<Card> hand3 = deck.createHand(3);
@@ -37,5 +37,15 @@ public class ExtensionTest {
         Assertions.assertEquals(7, hand7.size());
         Assertions.assertEquals(3, hand3.size());
 
+    }
+
+    @Test
+    public void dealTest() {
+        Deck deck = new Deck();
+        ArrayList<ArrayList<Card>> hands = deck.deal(2, 5);
+        Assertions.assertEquals(3, hands.size());
+        Assertions.assertEquals(5, hands.get(0).size());
+        Assertions.assertEquals(5, hands.get(1).size());
+        Assertions.assertNotEquals(hands.get(0), hands.get(1));
     }
 }
