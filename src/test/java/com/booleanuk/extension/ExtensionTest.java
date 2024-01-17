@@ -26,4 +26,16 @@ public class ExtensionTest {
         ArrayList<Card> expected = new ArrayList<>(Arrays.asList(new Card(Suit.SPADES, 13), new Card(Suit.HEARTS, 10), new Card(Suit.DIAMONDS, 13)));
         Assertions.assertEquals(expected, deck.cards.subList(0,3));
     }
+
+    @Test
+    public void createHandTest() {
+        Deck deck = new Deck(new Random(100));
+        ArrayList<Card> hand5 = deck.createHand(5);
+        ArrayList<Card> hand7 = deck.createHand(7);
+        ArrayList<Card> hand3 = deck.createHand(3);
+        Assertions.assertEquals(5, hand5.size());
+        Assertions.assertEquals(7, hand7.size());
+        Assertions.assertEquals(3, hand3.size());
+
+    }
 }
