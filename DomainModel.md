@@ -19,7 +19,7 @@ Deck
 | Methods                            | Member variables      | Scenario                                                | Output                                                  |
 |------------------------------------|-----------------------|---------------------------------------------------------|---------------------------------------------------------|
 | create()                           | ArrayList<Card> cards | User runs program                                       | void                                                    |
-| shuffle()                          |                       | User runs program or when they choose to shuffle        | void                                                    |
+| shuffle()                          |                Random randomiser        | User runs program or when they choose to shuffle        | void                                                    |
 | createHand(int noOfCards)          |                       | User chooses to create a hand                           | List of specified no of cards                           |
 | deal(int noOfHands, int noOfCards) |                       | User chooses to deal                                    | A list of hands consisting of the specified no of cards |
 | viewTopCard()                      |                       | User chooses to view top card                           | The card first in the cards list                        |

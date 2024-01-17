@@ -1,12 +1,23 @@
 package com.booleanuk;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
     public ArrayList<Card> cards;
+    public Random randomiser;
+
 
     public Deck() {
+        randomiser = new Random();
         create();
+    }
+
+    public Deck(Random randomiser) {
+        this.randomiser = randomiser;
+        create();
+        shuffle();
     }
 
 
@@ -18,5 +29,9 @@ public class Deck {
             cards.add(new Card(Suit.DIAMONDS, value));
             cards.add(new Card(Suit.SPADES, value));
         }
+    }
+
+    private void shuffle() {
+        Collections.shuffle(cards, randomiser);
     }
 }
