@@ -1,0 +1,33 @@
+package com.booleanuk;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class RandomStudentSelector {
+    public Random randomiser;
+    public String[] students = {"Marit", "Nora", "Alexander", "Ole", "Stian", "Tollov"};
+
+    public RandomStudentSelector() {
+        this.randomiser = new Random();
+    }
+
+    public void showMenu() {
+        String menu = """
+                This is a random student selector.
+                S: Get random student.
+                P: Get random pairs.
+                G: Get random pair groups.
+                X: Exit program.""";
+        System.out.println(menu);
+    }
+
+    public String getRandomStudent() {
+        return this.students[this.randomiser.nextInt(this.students.length)];
+    }
+
+    public ArrayList<String[]> getPairs() {
+        ArrayList<String[]> pairs = new ArrayList<>();
+        pairs.add(new String[]{this.students[this.randomiser.nextInt(this.students.length)], this.students[this.randomiser.nextInt(this.students.length)]});
+        return pairs;
+    }
+}
